@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Gaydar</title>
+    <meta name="description" content="Check your status with The Gaydar!">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin-top: 50px;
+        }
+        h1 {
+            color: #ff69b4;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 2px solid #ff69b4;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 10px;
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ff1493;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #ff69b4;
+        }
+    </style>
+</head>
+<body>
+    <h1>The Gaydar</h1>
+    <p>Enter your name to find out:</p>
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <button onclick="showResult()">Submit</button>
+    <div id="result"></div>
+
+    <script>
+        function showResult() {
+            const name = document.getElementById('nameInput').value;
+            const result = document.getElementById('result');
+            if (name) {
+                result.textContent = "You're gay!";
+            } else {
+                result.textContent = "Please enter a name.";
+            }
+        }
+    </script>
+</body>
+</html>
